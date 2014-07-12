@@ -1,0 +1,39 @@
+<div class="contenedor-nav">
+<div class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div style="width:100%">
+			<a href="#/" class="navbar-brand">
+				<img class="img-responsive" src="images/All/header-logo.png" alt="">
+			</a>
+		</div>
+
+		<button class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<div class="collapse navbar-collapse nav-collapse" ng-controller="HeaderController">
+			<ul class="nav navbar-nav navbar-right nav-tabs">
+				<li ng-class="{ active: isActive('/personaliza')}"><a href="#/personaliza" class=""><img src="images/All/header-personaliza.png" height="50" width="85" alt=""><center>Personaliza</center></a></li>	
+				<li ng-class="{ active: isActive('/bicicletas')}"><a href="#/bicicletas" class=""><img class="img-responsive" src="images/All/header-bicicletas.png" height="50" width="85" alt=""><center>Bicicletas</center></a></li>
+				<li ng-class="{ active: isActive('/cuadros')}"><a href="#/cuadros" class=""><img src="images/All/header-cuadros.png" height="50" width="85" alt=""><center>Cuadros</center></a></li>
+				<!-- <li ng-class="{ active: isActive('/personaliza')}"><a href="#/personaliza" class=""><img src="images/All/header-personaliza.png" height="50" width="85" alt=""><center>Personaliza</center></a></li> -->
+				<li ng-class="{ active: isActive('/talleres')}"><a href="#/talleres" class=""><img src="images/All/header-talleres.png" height="50" width="85" alt=""><center>Talleres</center></a></li>
+				<!-- <li ng-class="{ active: isActive('/merchandise')}"><a href="#/merchandise" class=""><img src="images/All/header-merch.png" height="50" width="85" alt=""><center>Merchandise</center></a></li> -->
+				<li ng-class="{ active: isActive('/open-source')}"><a href="#/open-source" class=""><img src="images/All/header-open.png" height="50" width="85" alt=""><center>Open Source</center></a></li>
+				<li ng-class="{ active: isActive('/contacto')}"><a href=" #/contacto" class=""><img src="images/All/header-contacto.png" height="50" width="85" alt=""><center>Contacto</center></a></li>
+			</ul>
+		</div>
+		<!-- <ul class="nav navbar-collapse nav-collapse nav-tabs pull-right">
+
+            <li class= "active"><a href="#" class="navbar-link"><img src = "img\All\header-bicicletas.png" class="img-responsive"><center><b>Bicicletas</b></center></a></li>
+            <li><a href="cuadros.html" class="navbar-link"><img src = "img\All\header-cuadros.png" class="img-responsive"><span><center><strong>Cuadros</strong></center></span></a></li>
+            <li><a href="#" class="navbar-link" ><img src = "img\All\header-personaliza.png" class="img-responsive"><span><center><b>Personaliza</b></center></span></a></li>
+            <li><a href="#" class="navbar-link"><img src = "img\All\header-talleres.png" class="img-responsive"><span><center><b>Talleres</b></center></span></a></li>
+            <li><a href="#" class="navbar-link"><img src = "img\All\header-merch.png" class="img-responsive"><span><center><b>Merchandise</b></center></span></a></li>
+            <li><a href="#" class="navbar-link"><img src = "img\All\header-open.png" class="img-responsive"><center><b>Open Source</b></center></a></li>
+            <li><a href="#" class="navbar-link" data-toggle="tooltip" title="contacto"><img src = "img\All\header-contacto.png" class="img-responsive"><span><center><b>Contacto</b></center></span></a></li>
+          </ul> -->
+	</div>
+</div>
+</div>

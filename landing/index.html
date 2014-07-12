@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/TweenMax.min.js"></script>
+<script type="text/javascript" src="jquery.neosmart.fb.wall/jquery-1.6.1.min.js"></script>	<span></span>
+<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+</head>
+<title></title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+style {
+	margin: 0px;
+	padding: 0px;	
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#fondo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.bici {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#text1 {
+	display: block;
+	position: absolute;
+	width: 1100px;
+	height: 60px;
+	padding-top: 40px;
+}
+
+#text1 h1 {
+	font-family: 'Merriweather', serif;
+	font-size: 37px;
+	padding-left: 100px;
+}
+
+#cont1 {
+	width: 550px;
+	height: 149px;
+	position: absolute;
+	float: left;
+}
+
+#cont1 h3 {
+	display: block;
+	height: 14px;
+	position: absolute;
+	font-family: 'Merriweather', serif;
+	font-size: 13px;
+	padding-top: 90px;
+	margin-left: 248px;
+
+}
+
+#map img {
+	display: block;
+	position: absolute;
+	width: 110px;
+	height: 50px;
+	margin-left: 253px;
+	padding-top: 115px;
+	z-index: 1;
+}
+
+
+
+#cont2 {
+	width: 550px;
+	height: 149px;
+	position: relative;
+}
+
+#cont2 h3{
+	display: block;
+	height: 14px;
+	position: relative;
+	font-family: 'Merriweather', serif;
+	font-size: 12px;
+	padding-top: 91px;
+	margin-left: 466px;
+
+}
+
+#tex2 {
+	display: block;
+	height: 14px;
+	position: absolute;
+	font-family: 'Merriweather', serif;
+	font-size: 12px;
+}
+
+#ico1 {
+	display: block;
+	position: relative;
+	width: 400px;
+	height: 21px;
+	float: left;
+	margin-left: 420px;
+}
+
+#mex {
+	position: absolute;
+	width: 70px;
+	height: 20px;
+	padding-top: 10px;s
+
+}
+	
+#alem {
+	position: relative;
+	display: block;
+	float: right;
+	width: 95px;
+	height: 20px;
+	padding-top: 10px;
+	padding-right: 200px;
+
+}
+
+#ico2 {
+	display: block;
+	position: absolute;
+	width: 400px;
+	height: 21px;
+	float: right;
+	margin-left: 420px;
+}
+
+#esp {
+	display: block;
+	float: left;
+	width: 73px;
+	height: 20px;
+	padding-top: 15px;
+	margin-left: 420px;	
+}
+	
+#eua {
+	position: absolute;
+	display: block;
+	float: left;
+	width: 73px;
+	height: 20px;
+	margin-left: 525px;
+	margin-top: 36px; 
+	
+
+
+}
+
+
+</style>
+<body>
+	<div id="fondo">
+		<img class="bici" src="img/cruise1.jpg.png">
+		<img class="bici" src="img/img5.jpg">
+		<img class="bici" src="img/img3.jpg">
+		<img class="bici" src="img/img4.jpg">
+			<script>
+					var index = 0;
+					showSlide(index);
+					setInterval (nextSlide, 2000);
+
+					function nextSlide () {
+						var total = $ (".bici").length;
+						index++;
+						if (index>=total){index=0} 
+						showSlide (index);		
+					}
+
+					function showSlide (index) {
+						console.log(index);
+						TweenLite.to($(".bici"), 1, {alpha: 0});
+						TweenLite.to($(".bici").eq(index), 1, {alpha: 1});
+					}
+
+				</script>
+	</div>
+	<div id="text1">
+		<h1>Choose a site...</h1>
+	</div>	
+	<div id="cont1">
+		<h3>International site</h3>
+		<div id="map">
+			<a href="http://bamboocycles.com/es"><img src="img/mapa.png"></a>
+		</div>
+	</div>
+	<div id="cont2">
+		<h3>Local sites</h3>
+		<div id="ico1">
+			<a href="http://bamboocycles.com.mx"><img id="mex" src="img/mexico.png"></a>
+			<a href="htto://bamboocycles.com/de"><img id="alem" src="img/alemania.png"></a>
+		</div>
+		<div div="ico2">
+			<a href="http://bamboocycles.com/es"><img id="esp" src="img/esp.png"></a>
+			 <a href="http://bamboocycles.com/en"><img id="eua" src="img/eua.png"></a>
+		</div>
+	</div>
+</body>
+</html>

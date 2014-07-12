@@ -1,0 +1,75 @@
+<div class="section-one col-xs-6 col-sm-4 col-md-4 col-lg-4 margenes">Hola</div>
+<div class="section-two col-xs-6 col-sm-4 col-md-4 col-lg-4 margenes">Mundo</div>
+<div class="section-three col-xs-6 col-sm-4 col-md-4 col-lg-4 margenes">Como</div>
+<div class="section-four col-xs-6 col-sm-4 col-md-4 col-lg-4 margenes">Como</div>
+<div class="section-five col-xs-6 col-sm-4 col-md-4 col-lg-4 margenes">Como</div>
+<div class="section-six col-xs-6 col-sm-4 col-md-4 col-lg-4 margenes">Como</div>
+
+	<div class="container">
+	<p>
+  <input type="button" value="set" ng-click="myCssVar=true">
+  <input type="button" value="clear" ng-click="myCssVar=false">
+  <br>
+  <span class="escon" ng-hide="myCssVar" ng-class="myCssVar">CSS-Animated Text</span>
+</p>
+		<h1>Hola mundo!!!!</h1>
+		<h2>View 1</h2>
+
+		Name:
+		<br/>
+		<input type="text" ng-model="name"/>
+		<br/>
+		<ul>
+			<li ng-repeat="cust in customers | filter:name">{{cust.name}}</li>
+		</ul>
+
+		<br/>
+		Customer Name: <br>
+		<input type="text" ng-model="newCustomer.name">
+		<br>
+		<input type="text" ng-model="newCustomer.city">
+		<br>
+		<button ng-click="addCustomer()">Add Customer</button>
+		<br>
+		<a href="#/view2">Go to view2</a>
+		<br>
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-star"></span> Star
+		</button>
+
+		<div class="container">
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-default">Left</button>
+				<button type="button" class="btn btn-default">Middle</button>
+				<button type="button" class="btn btn-default">Right</button>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
+				Dropdown
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+			</ul>
+		</div>
+
+		<!-- Single button -->
+		<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Action <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#">Action</a></li>
+				<li><a href="#">Another action</a></li>
+				<li><a href="#">Something else here</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Separated link</a></li>
+			</ul>
+		</div>
+	</div>
