@@ -610,20 +610,20 @@ demoApp.directive('modalDialog', function() {
     replace: true, // Replace with the template below
     transclude: true, // we want to insert custom content inside the directive
     link: function(scope, element, attrs) {
-      scope.dialogStyle = {};
-      if (attrs.width)
-        scope.dialogStyle.width = attrs.width;
-      if (attrs.height)
-        scope.dialogStyle.height = attrs.height;
-      scope.hideModal = function() {
-        scope.show = false;
-      };
+    	scope.dialogStyle = {};
+    	if (attrs.width)
+    		scope.dialogStyle.width = attrs.width;
+    	if (attrs.height)
+    		scope.dialogStyle.height = attrs.height;
+    	scope.hideModal = function() {
+        	scope.show = false;
+      	};
     },
-    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+    templateUrl: "templates/modal.html"
   };
 });
 
-demoApp.directive('sliderControl', function ($timeout) {
+demoApp.directive('sliderControl', function ($rootScope) {
   return {
     restrict: 'E',
     replace: true,
@@ -631,26 +631,22 @@ demoApp.directive('sliderControl', function ($timeout) {
       images: '='
     },
     link: function (scope, elem, attrs) {
-    	scope.$watch('currentIndex', function () {
-		    scope.images.forEach( function (image) {
-		      image.visible = false; // make every image invisible
-		    });
-		 
-		    scope.images[scope.currentIndex].visible = true; // make the current image visible
-		});
-
-		scope.setCurrentSlideIndex = function (index) {
-			console.log(index);
-            scope.currentIndex = index;
+    	scope.currentIndex = 0;
+    	scope.setCurrentSlideIndex = function (index) {
+    		scope.currentIndex = index;
+    		$rootScope.$broadcast('slider.changeSlide', index);
+        };
+        scope.isCurrentSlideIndex = function (index) {
+            return scope.currentIndex === index;
         };
     },
     templateUrl: 'templates/slider_control.html'
   };
 });
 
-demoApp.directive('slider', function ($timeout) {
+demoApp.directive('slider', function ($rootScope, $timeout) {
   return {
-    restrict: 'AE',
+    restrict: 'E',
     replace: true,
     scope: {
       images: '='
@@ -668,7 +664,6 @@ demoApp.directive('slider', function ($timeout) {
 			scope.direction = 'right';
 		    scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.images.length - 1;
 		};
-
 		scope.$watch('currentIndex', function () {
 		    scope.images.forEach( function (image) {
 		      image.visible = false; // make every image invisible
@@ -685,6 +680,9 @@ demoApp.directive('slider', function ($timeout) {
             return scope.currentIndex === index;
         };
 
+        scope.$on('slider.changeSlide', function(e, data){
+        	scope.setCurrentSlideIndex(data);
+        });
         // $scope.prevSlide = function () {
         //     $scope.direction = 'left';
         //     $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;

@@ -1,15 +1,14 @@
-<div class="b-products maximize" ng-animate="'animate'" ng-controller="PersonalizaController">
+<div class="b-products maximize" ng-animate="'animate'" ng-controller="PersonalizaCtrl">
 	<div class="maximize section-container" ng-switch on="isPersonaliza()">
 		<div class="flex-container customize-change-animation" ng-switch-when="false">
 			<div class="margenes section-zero" ng-class='{"selected": selected_index!=0}'>
 				<!--<h2 ng-click="select(0)">Racer Street</h2>-->
-				 <!--<h1><span ng-click="select(0)">Bicicletas/</span>{{type}}</h1>-->
+				<!--<h1><span ng-click="select(0)">Bicicletas/</span>{{type}}</h1>-->
 				<div class="section-zero-container">
-					<div class="text-section">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-					<div class="video-section"> <iframe src="//www.youtube.com/embed/TSOsg_mUdIw" frameborder="0" width="100%"
-					height="60%" allowfullscreen></iframe> </div>
+					<div class="text-section">Lorem ipsum dolor</div>
+					<div class="video-section"> <iframe src="//www.youtube.com/embed/TSOsg_mUdIw" frameborder="0" width="100%" height="60%" allowfullscreen></iframe> </div>
 				</div>
-				 	<div class="customize-button" ng-click="changePersonaliza()"><div class="text">Personaliza</div></div>	
+				 <div class="customize-button" ng-click="changePersonaliza()"><div class="text">Personaliza</div></div>	
 			</div>
 			<div class="margenes section-one flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}' ng-switch on="selected_index==1">
 				<slider ng-switch-when="true" images="cruise_images" />
