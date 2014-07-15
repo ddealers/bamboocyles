@@ -1,0 +1,11 @@
+<nav class="slider-control-nav">
+	<div class="slider-control-nav-wrapper">
+		<ul class="slider-control-nav-list">
+			<li class="slider-control-nav-thumb" ng-repeat="slide in images" ng-click="setCurrentSlideIndex($index);">
+				<a ng-class="{'active':isCurrentSlideIndex($index)}" href="">
+					<img class="slider-control-slide-img" ng-src="{{slide.src}}" />
+				</a>
+			</li>
+      </ul>
+  </div>
+</nav>

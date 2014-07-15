@@ -1,4 +1,14 @@
-<div class="b-talleres maximize">
+<div class="b-talleres maximize" ng-controller="TalleresCtrl">
+	<modal-dialog show='modalShown' width='750px' height='90%'>
+  		<div>
+	        <form class="contacto">
+	            <div class="float-left col-50"><label>Nombre:</label><input type='text' value=''></div>
+	            <div class="float-left col-50"><label>Email:</label><input type='text' value=''></div>
+	            <div class="block"><label>Mensaje:</label><textarea rows='6'></textarea></div>
+	            <div class="float-right"><input type='submit' value='Envia Mensaje'></div>
+	        </form>
+    	</div>
+	</modal-dialog>
 	<div class="section-one margenes">
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim suscipit facilisis. Pellentesque et gravida tellus. In elit velit, rhoncus eu tortor sit amet, ultricies lobortis urna. Quisque facilisis ante eu justo vehicula fringilla. Vivamus sed magna lectus. Quisque ac accumsan ligula, ut elementum arcu. Duis risus est, aliquet sit amet nunc vel, lobortis dapibus dui. Fusce dictum lorem id eros pretium, ac consectetur sapien placerat. Morbi dignissim at sapien sit amet convallis. Sed pulvinar diam vitae tellus sagittis vehicula. Praesent luctus nisl sit amet vestibulum imperdiet. Ut non magna quis metus porta dapibus.
@@ -14,6 +24,6 @@
 		</div>	
 	</div>
 	<div class="section-menu">
-		<h1>Inscribirse</h1>
+		<h1 ng-click="showForm()">Inscribirse</h1>
 	</div>
 </div>

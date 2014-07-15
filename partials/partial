@@ -1,0 +1,37 @@
+<div class="flex-container customize-change-animation" ng-switch-when="true">
+			<div class="margenes section-zero" ng-class='{"selected": selected_index!=0}'>
+				<div class="section-zero-container">
+					<div class="customize-container">
+						<div class="customize-container-text">Personaliza tu bici eligiendo entre los colores disponibles</div>
+						<div ng-repeat="data in customize_data" class="customize-color-container">
+							<!-- <div class="customize-color-text">Personaliza tu bici eligiendo entre los colores disponibles</div> -->
+							<img class="customize-color-img" src="images/Customize/puños.png" height="39" width="39">
+							<div class="customize-color-title">{{data.name}}</div>
+							<div class="customize-color-color-container">
+								<div ng-repeat="color in data.colors" class="customize-color-color-container-color" style="background-color: {{color}}"></div>
+							</div>
+						</div>
+					</div>	
+				</div>			
+			</div>
+			<div class="margenes section-one flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}'>
+				<div class="img-container" ng-click="select(1)">
+					<img class="img-responsive" src="../images/Cuadros/cruise.jpg"  alt="">
+				</div>
+			</div>
+			<div class="margenes section-two flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}'>
+				<div class="img-container" ng-click="select(2)">
+					<img class="img-responsive" src="../images/Cuadros/racer.jpg" alt="">
+				</div>
+			</div>
+			<div class="margenes section-three flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}'>
+				<div class="img-container" ng-click="select(3)">
+					<img class="img-responsive" src="../images/Cuadros/street.jpg" alt="">
+				</div>
+				<!-- <h1>Street</h1> -->
+			</div>
+			<!-- <div class="margenes section-three flex-container-center" ng-click="select(3)" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}'>
+				<img class="img-responsive" src="../images/Bicicletas/street.jpg" height="458" width="458" alt="">
+				<h1>Street</h1>
+			</div> -->
+		</div>

@@ -155,68 +155,134 @@ demoApp.controller('BicicletasController', function ($scope) {
     ];
 
     $scope.racer_images = [{
-	    src: '../images/Bicicletas/racer/img1.jpg',
+	    src: './images/Bicicletas/racer/img1.jpg',
 	    title: 'Pic 1'
 	  }, {
-	    src: '../images/Bicicletas/racer/img2.jpg',
+	    src: './images/Bicicletas/racer/img2.jpg',
 	    title: 'Pic 2'
 	  }, {
-	    src: '../images/Bicicletas/racer/img3.jpg',
+	    src: './images/Bicicletas/racer/img3.jpg',
 	    title: 'Pic 3'
 	  }, {
-	    src: '../images/Bicicletas/racer/img4.jpg',
+	    src: './images/Bicicletas/racer/img4.jpg',
 	    title: 'Pic 4'
 	  }, {
-	    src: '../images/Bicicletas/racer/img5.jpg',
+	    src: './images/Bicicletas/racer/img5.jpg',
 	    title: 'Pic 5'
 	  }, {
-	    src: '../images/Bicicletas/racer/img6.jpg',
+	    src: './images/Bicicletas/racer/img6.jpg',
 	    title: 'Pic 6'
 	  // }, {
-	    // src: '../images/Bicicletas/racer/img7.jpg',
+	    // src: './images/Bicicletas/racer/img7.jpg',
 	    // title: 'Pic 7'
 	  }];
 
 	$scope.cruise_images = [{
-	    src: '../images/Bicicletas/cruise/img1.jpg',
+	    src: './images/Bicicletas/cruise/img1.jpg',
 	    title: 'Pic 1'
 	  }, {
-	    src: '../images/Bicicletas/cruise/img2.jpg',
+	    src: './images/Bicicletas/cruise/img2.jpg',
 	    title: 'Pic 2'
 	  }, {
-	    src: '../images/Bicicletas/cruise/img3.jpg',
+	    src: './images/Bicicletas/cruise/img3.jpg',
 	    title: 'Pic 3'
 	  }, {
-	    src: '../images/Bicicletas/cruise/img4.jpg',
+	    src: './images/Bicicletas/cruise/img4.jpg',
 	    title: 'Pic 4'
 	  }, {
-	    src: '../images/Bicicletas/cruise/img5.jpg',
+	    src: './images/Bicicletas/cruise/img5.jpg',
 	    title: 'Pic 5'
 	  }, {
-	    src: '../images/Bicicletas/cruise/img6.jpg',
+	    src: './images/Bicicletas/cruise/img6.jpg',
 	    title: 'Pic 6'
 	  }];
 
 	$scope.street_images = [{
-	    src: '../images/Bicicletas/street/img1.jpg',
+	    src: './images/Bicicletas/street/img1.jpg',
 	    title: 'Pic 1'
 	  }, {
-	    src: '../images/Bicicletas/street/img2.jpg',
+	    src: './images/Bicicletas/street/img2.jpg',
 	    title: 'Pic 2'
 	  }, {
-	    src: '../images/Bicicletas/street/img3.jpg',
+	    src: './images/Bicicletas/street/img3.jpg',
 	    title: 'Pic 3'
 	  }, {
-	    src: '../images/Bicicletas/street/img4.jpg',
+	    src: './images/Bicicletas/street/img4.jpg',
 	    title: 'Pic 4'
 	  }, {
-	    src: '../images/Bicicletas/street/img5.jpg',
+	    src: './images/Bicicletas/street/img5.jpg',
 	    title: 'Pic 5'
 	  }, {
-	    src: '../images/Bicicletas/street/img6.jpg',
+	    src: './images/Bicicletas/street/img6.jpg',
 	    title: 'Pic 6'
 	  }, {
-	    src: '../images/Bicicletas/street/img7.jpg',
+	    src: './images/Bicicletas/street/img7.jpg',
+	    title: 'Pic 7'
+	  }];
+
+	  $scope.racer_thumbs = [{
+	    src: './images/Bicicletas/racer/thumbs/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Bicicletas/racer/thumbs/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Bicicletas/racer/thumbs/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Bicicletas/racer/thumbs/img4.jpg',
+	    title: 'Pic 4'
+	  }, {
+	    src: './images/Bicicletas/racer/thumbs/img5.jpg',
+	    title: 'Pic 5'
+	  }, {
+	    src: './images/Bicicletas/racer/thumbs/img6.jpg',
+	    title: 'Pic 6'
+	  // }, {
+	    // src: './images/Bicicletas/racer/img7.jpg',
+	    // title: 'Pic 7'
+	  }];
+
+	$scope.cruise_thumbs = [{
+	    src: './images/Bicicletas/cruise/thumbs/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Bicicletas/cruise/thumbs/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Bicicletas/cruise/thumbs/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Bicicletas/cruise/thumbs/img4.jpg',
+	    title: 'Pic 4'
+	  }, {
+	    src: './images/Bicicletas/cruise/thumbs/img5.jpg',
+	    title: 'Pic 5'
+	  }, {
+	    src: './images/Bicicletas/cruise/thumbs/img6.jpg',
+	    title: 'Pic 6'
+	  }];
+
+	$scope.street_thumbs = [{
+	    src: './images/Bicicletas/street/thumbs/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Bicicletas/street/thumbs/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Bicicletas/street/thumbs/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Bicicletas/street/thumbs/img4.jpg',
+	    title: 'Pic 4'
+	  }, {
+	    src: './images/Bicicletas/street/thumbs/img5.jpg',
+	    title: 'Pic 5'
+	  }, {
+	    src: './images/Bicicletas/street/thumbs/img6.jpg',
+	    title: 'Pic 6'
+	  }, {
+	    src: './images/Bicicletas/street/thumbs/img7.jpg',
 	    title: 'Pic 7'
 	  }];
 });
@@ -304,68 +370,134 @@ demoApp.controller('CuadrosController', function ($scope) {
     ];
 
     $scope.racer_images = [{
-	    src: '../images/Cuadros/racer/img1.jpg',
+	    src: './images/Cuadros/racer/img1.jpg',
 	    title: 'Pic 1'
 	  }, {
-	    src: '../images/Cuadros/racer/img2.jpg',
+	    src: './images/Cuadros/racer/img2.jpg',
 	    title: 'Pic 2'
 	  }, {
-	    src: '../images/Cuadros/racer/img3.jpg',
+	    src: './images/Cuadros/racer/img3.jpg',
 	    title: 'Pic 3'
 	  }, {
-	    src: '../images/Cuadros/racer/img4.jpg',
+	    src: './images/Cuadros/racer/img4.jpg',
 	    title: 'Pic 4'
 	  }, {
-	    src: '../images/Cuadros/racer/img5.jpg',
+	    src: './images/Cuadros/racer/img5.jpg',
 	    title: 'Pic 5'
 	  }, {
-	    src: '../images/Cuadros/racer/img6.jpg',
+	    src: './images/Cuadros/racer/img6.jpg',
 	    title: 'Pic 6'
 	  }, {
-	    src: '../images/Cuadros/racer/img7.jpg',
+	    src: './images/Cuadros/racer/img7.jpg',
 	    title: 'Pic 7'
 	  }];
 
 	$scope.cruise_images = [{
-	    src: '../images/Cuadros/cruise/img1.jpg',
+	    src: './images/Cuadros/cruise/img1.jpg',
 	    title: 'Pic 1'
 	  }, {
-	    src: '../images/Cuadros/cruise/img2.jpg',
+	    src: './images/Cuadros/cruise/img2.jpg',
 	    title: 'Pic 2'
 	  }, {
-	    src: '../images/Cuadros/cruise/img3.jpg',
+	    src: './images/Cuadros/cruise/img3.jpg',
 	    title: 'Pic 3'
 	  }, {
-	    src: '../images/Cuadros/cruise/img4.jpg',
+	    src: './images/Cuadros/cruise/img4.jpg',
 	    title: 'Pic 4'
 	  // }, {
-	  //   src: '../images/Cuadros/cruise/img5.jpg',
+	  //   src: './images/Cuadros/cruise/img5.jpg',
 	  //   title: 'Pic 5'
 	  // }, {
-	  //   src: '../images/Cuadros/cruise/img6.jpg',
+	  //   src: './images/Cuadros/cruise/img6.jpg',
 	  //   title: 'Pic 6'
 	  }];
 
 	$scope.street_images = [{
-	    src: '../images/Cuadros/street/img1.jpg',
+	    src: './images/Cuadros/street/img1.jpg',
 	    title: 'Pic 1'
 	  }, {
-	    src: '../images/Cuadros/street/img2.jpg',
+	    src: './images/Cuadros/street/img2.jpg',
 	    title: 'Pic 2'
 	  }, {
-	    src: '../images/Cuadros/street/img3.jpg',
+	    src: './images/Cuadros/street/img3.jpg',
 	    title: 'Pic 3'
 	  }, {
-	    src: '../images/Cuadros/street/img4.jpg',
+	    src: './images/Cuadros/street/img4.jpg',
 	    title: 'Pic 4'
 	  }, {
-	    src: '../images/Cuadros/street/img5.jpg',
+	    src: './images/Cuadros/street/img5.jpg',
 	    title: 'Pic 5'
 	  }, {
-	    src: '../images/Cuadros/street/img6.jpg',
+	    src: './images/Cuadros/street/img6.jpg',
 	    title: 'Pic 6'
 	  }, {
-	    // src: '../images/Cuadros/street/img7.jpg',
+	    // src: './images/Cuadros/street/img7.jpg',
+	    // title: 'Pic 7'
+	  }];
+
+	  $scope.racer_thumbs = [{
+	    src: './images/Cuadros/racer/thumbs/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img4.jpg',
+	    title: 'Pic 4'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img5.jpg',
+	    title: 'Pic 5'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img6.jpg',
+	    title: 'Pic 6'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img7.jpg',
+	    title: 'Pic 7'
+	  }];
+
+	$scope.cruise_thumbs = [{
+	    src: './images/Cuadros/cruise/thumbs/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Cuadros/cruise/thumbs/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Cuadros/cruise/thumbs/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Cuadros/cruise/thumbs/img4.jpg',
+	    title: 'Pic 4'
+	  // }, {
+	  //   src: './images/Cuadros/cruise/img5.jpg',
+	  //   title: 'Pic 5'
+	  // }, {
+	  //   src: './images/Cuadros/cruise/img6.jpg',
+	  //   title: 'Pic 6'
+	  }];
+
+	$scope.street_thumbs = [{
+	    src: './images/Cuadros/street/thumbs/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Cuadros/street/thumbs/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Cuadros/street/thumbs/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Cuadros/street/thumbs/img4.jpg',
+	    title: 'Pic 4'
+	  }, {
+	    src: './images/Cuadros/street/thumbs/img5.jpg',
+	    title: 'Pic 5'
+	  }, {
+	    src: './images/Cuadros/street/thumbs/img6.jpg',
+	    title: 'Pic 6'
+	  }, {
+	    // src: './images/Cuadros/street/img7.jpg',
 	    // title: 'Pic 7'
 	  }];
 });
@@ -441,8 +573,8 @@ demoApp.controller('TwitterController', function ($scope) {
 });
 
 demoApp.controller('ContactoController', function ($scope) {
-
 	var map;
+	$scope.modalShown = false;
 	function initialize() {
 	  var mapOptions = {
 	    zoom: 8,
@@ -454,11 +586,67 @@ demoApp.controller('ContactoController', function ($scope) {
 	  console.log("Entrón aca");
 	  console.log(map_tmp);
 	}
-
+	
+	$scope.showForm = function(){
+		$scope.modalShown = true;
+	}
 	// google.maps.event.addDomListener(window, 'load', initialize);
 	initialize();
 });
 
+demoApp.controller('TalleresCtrl', function ($scope) {
+	$scope.modalShown = false;
+	$scope.showForm = function(){
+		$scope.modalShown = true;
+	}
+});
+
+demoApp.directive('modalDialog', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      show: '='
+    },
+    replace: true, // Replace with the template below
+    transclude: true, // we want to insert custom content inside the directive
+    link: function(scope, element, attrs) {
+      scope.dialogStyle = {};
+      if (attrs.width)
+        scope.dialogStyle.width = attrs.width;
+      if (attrs.height)
+        scope.dialogStyle.height = attrs.height;
+      scope.hideModal = function() {
+        scope.show = false;
+      };
+    },
+    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+  };
+});
+
+demoApp.directive('sliderControl', function ($timeout) {
+  return {
+    restrict: 'E',
+    replace: true,
+    scope: {
+      images: '='
+    },
+    link: function (scope, elem, attrs) {
+    	scope.$watch('currentIndex', function () {
+		    scope.images.forEach( function (image) {
+		      image.visible = false; // make every image invisible
+		    });
+		 
+		    scope.images[scope.currentIndex].visible = true; // make the current image visible
+		});
+
+		scope.setCurrentSlideIndex = function (index) {
+			console.log(index);
+            scope.currentIndex = index;
+        };
+    },
+    templateUrl: 'templates/slider_control.html'
+  };
+});
 
 demoApp.directive('slider', function ($timeout) {
   return {
