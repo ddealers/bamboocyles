@@ -1,42 +1,6 @@
 <div class="b-products maximize" ng-animate="'animate'" ng-controller="PersonalizaCtrl">
 	<div class="maximize section-container" ng-switch on="isPersonaliza()">
-		<div class="flex-container customize-change-animation" ng-switch-when="false">
-			<div class="margenes section-zero" ng-class='{"selected": selected_index!=0}'>
-				<!--<h2 ng-click="select(0)">Racer Street</h2>-->
-				<!--<h1><span ng-click="select(0)">Bicicletas/</span>{{type}}</h1>-->
-				<div class="section-zero-container">
-					<div class="text-section">Lorem ipsum dolor</div>
-					<div class="video-section"> <iframe src="//www.youtube.com/embed/TSOsg_mUdIw" frameborder="0" width="100%" height="60%" allowfullscreen></iframe> </div>
-				</div>
-				 <div class="customize-button" ng-click="changePersonaliza()"><div class="text">Personaliza</div></div>	
-			</div>
-			<div class="margenes section-one flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}' ng-switch on="selected_index==1">
-				<slider ng-switch-when="true" images="cruise_images" />
-				<div ng-switch-when="false" class="img-container" ng-click="select(1)">
-					<img class="img-responsive" src="../images/Bicicletas/cruise.jpg"  alt="">
-				</div>
-				<h1>Cruise</h1>
-			</div>
-			<div class="margenes section-two flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}' ng-switch on="selected_index==2">
-				<slider ng-switch-when="true" images="racer_images" />
-				<div ng-switch-when="false" class="img-container" ng-click="select(2)">
-					<img class="img-responsive" src="../images/Bicicletas/racer.jpg" alt="">
-				</div>
-				<h1>Racer</h1>
-			</div>
-			<div class="margenes section-three flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}' ng-switch on="selected_index==3">
-				<slider ng-switch-when="true" images="street_images" />
-				<div ng-switch-when="false" class="img-container" ng-click="select(3)">
-					<img class="img-responsive" src="../images/Bicicletas/street.jpg" alt="">
-				</div>
-				<h1>Street</h1>
-			</div>
-			<!-- <div class="margenes section-three flex-container-center" ng-click="select(3)" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}'>
-				<img class="img-responsive" src="../images/Bicicletas/street.jpg" height="458" width="458" alt="">
-				<h1>Street</h1>
-			</div> -->
-		</div>
-		<div class="flex-container customize-change-animation" ng-switch-when="true">
+		<div class="flex-container customize-change-animation">
 			<div class="margenes section-zero" ng-class='{"selected": selected_index!=0}'>
 				<div class="section-zero-container">
 					<div class="customize-container">
@@ -46,7 +10,7 @@
 							<img class="customize-color-img" src="images/Customize/puños.png" height="39" width="39">
 							<div class="customize-color-title">{{data.name}}</div>
 							<div class="customize-color-color-container">
-								<div ng-repeat="color in data.colors" class="customize-color-color-container-color" style="background-color: {{color}}"></div>
+								<div ng-click="customize(data.slug, $index)" ng-repeat="color in data.colors" class="customize-color-color-container-color" style="background-color: {{color.color}}"></div>
 							</div>
 						</div>
 					</div>	
@@ -54,23 +18,27 @@
 			</div>
 			<div class="margenes section-one flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}'>
 				<div class="img-container" ng-click="select(1)">
-					<img class="img-responsive" src="../images/Bicicletas/cruise.jpg"  alt="">
+					<img ng-show="color.visible" ng-repeat="color in customize_data[0].colors" class="img-custom img-responsive" ng-src="./images/personaliza/cruise/{{color.name}}.png">
+					<img ng-show="color.visible" ng-repeat="color in customize_data[1].colors" class="img-custom img-responsive" ng-src="./images/personaliza/cruise/{{color.name}}.png">
+					<img ng-show="color.visible" ng-repeat="color in customize_data[2].colors" class="img-custom img-responsive" ng-src="./images/personaliza/cruise/{{color.name}}.png">
+					<img class="img-responsive" src="./images/personaliza/cruise.jpg">
 				</div>
 			</div>
 			<div class="margenes section-two flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}'>
 				<div class="img-container" ng-click="select(2)">
-					<img class="img-responsive" src="../images/Bicicletas/racer.jpg" alt="">
+					<img ng-show="color.visible" ng-repeat="color in customize_data[0].colors" class="img-custom img-responsive" ng-src="./images/personaliza/racer/{{color.name}}.png">
+					<img ng-show="color.visible" ng-repeat="color in customize_data[1].colors" class="img-custom img-responsive" ng-src="./images/personaliza/racer/{{color.name}}.png">
+					<img ng-show="color.visible" ng-repeat="color in customize_data[2].colors" class="img-custom img-responsive" ng-src="./images/personaliza/racer/{{color.name}}.png">
+					<img class="img-responsive" src="./images/personaliza/racer.jpg">
 				</div>
 			</div>
 			<div class="margenes section-three flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}'>
 				<div class="img-container" ng-click="select(3)">
-					<img class="img-responsive" src="../images/Bicicletas/street.jpg" alt="">
+					<img ng-show="color.visible" ng-repeat="color in customize_data[0].colors" class="img-custom img-responsive" ng-src="./images/personaliza/street/{{color.name}}.png">
+					<img ng-show="color.visible" ng-repeat="color in customize_data[1].colors" class="img-custom img-responsive" ng-src="./images/personaliza/street/{{color.name}}.png">
+					<img ng-show="color.visible" ng-repeat="color in customize_data[2].colors" class="img-custom img-responsive" ng-src="./images/personaliza/street/{{color.name}}.png">
+					<img class="img-responsive" src="./images/personaliza/street.jpg">
 				</div>
-				<h1>Street</h1>
-			</div>
-			 <div class="margenes section-three flex-container-center" ng-click="select(3)" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}'>
-				<img class="img-responsive" src="../images/Bicicletas/street.jpg" height="458" width="458" alt="">
-				<h1>Street</h1>
 			</div>
 		</div>
 	</div>
@@ -90,6 +58,5 @@
 		<div class="margenes menu-three" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}' ng-click="select(3)">
 			<h1>Street</h1>
 		</div>
-		
 	</div>
 </div>
