@@ -7236,4 +7236,7 @@ body,
     text-shadow: 1px 1px 0px white;
     background: none;
 }
+.img-custom{
+  z-index: 1;
+}
 /*# sourceMappingURL=/styles/main.css.map */

@@ -502,6 +502,251 @@ demoApp.controller('CuadrosController', function ($scope) {
 	  }];
 });
 
+demoApp.controller('PersonalizaCtrl', function($scope){
+	$scope.activo = false;
+	$scope.color = true;
+	$scope.type = 'racer';
+	$scope.selected_index = 0;
+	$scope.personaliza = true;
+
+	$scope.select = function (selection) {
+		for (var i = $scope.customize_data.length - 1; i >= 0; i--) {
+			for (var j = $scope.customize_data[i].colors.length - 1; j >= 0; j--) {
+				$scope.customize_data[i].colors[j].visible = false;
+			}
+		};
+		if($scope.selected_index==0){
+			$scope.personaliza = false;
+			if(selection == 1) {
+				$scope.comprado = "Seleccionaste la cruise";
+				$scope.type = "Cruise";
+			}
+			else if(selection == 2) {
+				$scope.comprado = "Seleccionaste la Racer";
+				$scope.type = "Racer";
+			}
+			else if(selection == 3) {
+				$scope.comprado = "Seleccionaste la Street";
+				$scope.type = "Street";
+			}
+			$scope.selected_index = selection;
+		}
+		else {
+			$scope.selected_index = 0;
+		}
+	}
+
+	$scope.isPersonaliza = function () {
+		return $scope.personaliza;
+	}
+	$scope.customize = function(group, index){
+		child = -1;
+		switch(group){
+			case "punos":
+			child = 0;
+			break;
+			case "ldel":
+			child = 1;
+			break;
+			case "ltra":
+			child = 2;
+			break;
+		}
+		for (var i = $scope.customize_data[child].colors.length - 1; i >= 0; i--) {
+			$scope.customize_data[child].colors[i].visible = false;
+		};
+		$scope.customize_data[child].colors[index].visible = true;
+	}
+	$scope.customize_data = [
+        {
+            name: "Puños",
+            slug: "punos",
+            image: "puños.png",
+            colors: [
+            	{color: "red", name: "punos_red", visible: false},
+            	{color: "blue", name: "punos_blue", visible: false}
+            ]
+        },
+        {
+            name: "Llanta delantera",
+            slug: "ldel",
+            image: "puños.png",
+            colors: [
+            	{color: "red", name:"LD1", visible: false},
+            	{color: "orange", name:"LD2", visible: false},
+            	{color: "green", name:"LD3", visible: false}
+            ]
+        },
+        {
+            name: "Llanta trasera",
+            slug: "ltra",
+            image: "puños.png",
+            colors: [
+            	{color: "red", name:"LT1", visible: false},
+            	{color: "orange", name:"LT2", visible: false},
+            	{color: "green", name:"LT3", visible: false}
+            ]
+        }
+        // {
+        //     name: "Cadena",
+        //     image: "puños.png",
+        //     colors: ["blue","purple","#55443A"]
+        // },
+        // {
+        //     name: "Puños",
+        //     image: "puños.png",
+        //     colors: ["red","blue"]
+        // },
+        // {
+        //     name: "Llanta delantera",
+        //     image: "puños.png",
+        //     colors: ["red","orange","green"]
+        // },
+        // {
+        //     name: "Llanta trasera",
+        //     image: "puños.png",
+        //     colors: ["red","blue"]
+        // },
+        // {
+        //     name: "Cadena",
+        //     image: "puños.png",
+        //     colors: ["blue","purple","#55443A"]
+        // }
+    ];
+
+    $scope.racer_images = [{
+	    src: './images/Cuadros/racer/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Cuadros/racer/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Cuadros/racer/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Cuadros/racer/img4.jpg',
+	    title: 'Pic 4'
+	  }, {
+	    src: './images/Cuadros/racer/img5.jpg',
+	    title: 'Pic 5'
+	  }, {
+	    src: './images/Cuadros/racer/img6.jpg',
+	    title: 'Pic 6'
+	  }, {
+	    src: './images/Cuadros/racer/img7.jpg',
+	    title: 'Pic 7'
+	  }];
+
+	$scope.cruise_images = [{
+	    src: './images/Cuadros/cruise/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Cuadros/cruise/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Cuadros/cruise/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Cuadros/cruise/img4.jpg',
+	    title: 'Pic 4'
+	  // }, {
+	  //   src: './images/Cuadros/cruise/img5.jpg',
+	  //   title: 'Pic 5'
+	  // }, {
+	  //   src: './images/Cuadros/cruise/img6.jpg',
+	  //   title: 'Pic 6'
+	  }];
+
+	$scope.street_images = [{
+	    src: './images/Cuadros/street/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Cuadros/street/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Cuadros/street/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Cuadros/street/img4.jpg',
+	    title: 'Pic 4'
+	  }, {
+	    src: './images/Cuadros/street/img5.jpg',
+	    title: 'Pic 5'
+	  }, {
+	    src: './images/Cuadros/street/img6.jpg',
+	    title: 'Pic 6'
+	  }, {
+	    // src: './images/Cuadros/street/img7.jpg',
+	    // title: 'Pic 7'
+	  }];
+
+	  $scope.racer_thumbs = [{
+	    src: './images/Cuadros/racer/thumbs/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img4.jpg',
+	    title: 'Pic 4'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img5.jpg',
+	    title: 'Pic 5'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img6.jpg',
+	    title: 'Pic 6'
+	  }, {
+	    src: './images/Cuadros/racer/thumbs/img7.jpg',
+	    title: 'Pic 7'
+	  }];
+
+	$scope.cruise_thumbs = [{
+	    src: './images/Cuadros/cruise/thumbs/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Cuadros/cruise/thumbs/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Cuadros/cruise/thumbs/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Cuadros/cruise/thumbs/img4.jpg',
+	    title: 'Pic 4'
+	  // }, {
+	  //   src: './images/Cuadros/cruise/img5.jpg',
+	  //   title: 'Pic 5'
+	  // }, {
+	  //   src: './images/Cuadros/cruise/img6.jpg',
+	  //   title: 'Pic 6'
+	  }];
+
+	$scope.street_thumbs = [{
+	    src: './images/Cuadros/street/thumbs/img1.jpg',
+	    title: 'Pic 1'
+	  }, {
+	    src: './images/Cuadros/street/thumbs/img2.jpg',
+	    title: 'Pic 2'
+	  }, {
+	    src: './images/Cuadros/street/thumbs/img3.jpg',
+	    title: 'Pic 3'
+	  }, {
+	    src: './images/Cuadros/street/thumbs/img4.jpg',
+	    title: 'Pic 4'
+	  }, {
+	    src: './images/Cuadros/street/thumbs/img5.jpg',
+	    title: 'Pic 5'
+	  }, {
+	    src: './images/Cuadros/street/thumbs/img6.jpg',
+	    title: 'Pic 6'
+	  }, {
+	    // src: './images/Cuadros/street/img7.jpg',
+	    // title: 'Pic 7'
+	  }];
+});
+
 demoApp.controller('MerchandiseController', function ($scope) {
 
 });
