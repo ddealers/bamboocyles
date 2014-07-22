@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/TweenMax.min.js"></script>
-<script type="text/javascript" src="jquery.neosmart.fb.wall/jquery-1.6.1.min.js"></script>	<span></span>
-<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/TweenMax.min.js"></script>
+	<script type="text/javascript" src="jquery.neosmart.fb.wall/jquery-1.6.1.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 </head>
-<title></title>
+<title>Landing	</title>
 <style>
-*{
-	margin: 0;
-	padding: 0;
-}
+
 style {
 	margin: 0px;
 	padding: 0px;	
@@ -38,65 +36,68 @@ html, body {
 	width: 100%;
 }
 
-#text1 {
-	display: block;
+#cuadro {
 	position: absolute;
-	width: 1100px;
-	height: 60px;
-	padding-top: 40px;
+	width: 547px;
+	height: 173px;
+	border-style: solid;
+	border-width: 2px;
+	top: 30px;
+	left: 30px;
+	border-color: #B4B2AE;
+	float: right;
 }
-
-#text1 h1 {
-	font-family: 'Merriweather', serif;
-	font-size: 37px;
-	padding-left: 100px;
-}
-
 #cont1 {
-	width: 550px;
-	height: 149px;
+	width: 150px;
+	height: 80px;
 	position: absolute;
+	top: 75px;
+	left: 140px;
 	float: left;
 }
 
-#cont1 h3 {
-	display: block;
-	height: 14px;
+#text1 {
 	position: absolute;
+	top: -32px;
 	font-family: 'Merriweather', serif;
-	font-size: 13px;
-	padding-top: 90px;
-	margin-left: 248px;
-
+	font-size: 53px;
+	left: 10px;
 }
 
-#map img {
+#inter {
+	position: relative;
+	font-family: 'Merriweather', serif;
+	font-size: 14px;
+	top: -17px;
+	left: 22px;
+}
+
+#map {
 	display: block;
 	position: absolute;
-	width: 110px;
-	height: 50px;
-	margin-left: 253px;
-	padding-top: 115px;
-	z-index: 1;
+	top: 17px;
+	width: 80%;
+	left: 16px;
 }
-
 
 
 #cont2 {
-	width: 550px;
-	height: 149px;
-	position: relative;
+	display: block;
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	top: 76px;
+	left: 300px;
+	float: right;
 }
 
 #cont2 h3{
-	display: block;
 	height: 14px;
-	position: relative;
+	position: absolute;
 	font-family: 'Merriweather', serif;
-	font-size: 12px;
-	padding-top: 91px;
-	margin-left: 466px;
-
+	font-size: 14px;
+	top: -39px;
+	left: 56px;
 }
 
 #tex2 {
@@ -109,61 +110,41 @@ html, body {
 
 #ico1 {
 	display: block;
-	position: relative;
-	width: 400px;
-	height: 21px;
-	float: left;
-	margin-left: 420px;
+	position: absolute;
+	width: 200px;
+	height: 66px;
+	top: 21px;
 }
 
 #mex {
 	position: absolute;
 	width: 70px;
-	height: 20px;
-	padding-top: 10px;s
-
+	float: right;
 }
 	
 #alem {
 	position: relative;
-	display: block;
+	width: 91px;
+	height: 23px;
 	float: right;
-	width: 95px;
-	height: 20px;
-	padding-top: 10px;
-	padding-right: 200px;
-
-}
-
-#ico2 {
-	display: block;
-	position: absolute;
-	width: 400px;
-	height: 21px;
-	float: right;
-	margin-left: 420px;
 }
 
 #esp {
-	display: block;
-	float: left;
-	width: 73px;
-	height: 20px;
-	padding-top: 15px;
-	margin-left: 420px;	
+	float: right;
+	width: 74px;
+	height: 23px;
+	top: 30px;
+	left: -35px;
+	position: relative;
 }
 	
 #eua {
-	position: absolute;
-	display: block;
-	float: left;
-	width: 73px;
-	height: 20px;
-	margin-left: 525px;
-	margin-top: 36px; 
-	
-
-
+	float: right;
+	width: 70px;
+	height: 24px;
+	top: 7px;
+	left: -21px;
+	position: relative;
 }
 
 
@@ -174,7 +155,7 @@ html, body {
 		<img class="bici" src="img/img5.jpg">
 		<img class="bici" src="img/img3.jpg">
 		<img class="bici" src="img/img4.jpg">
-			<script>
+				<!-- <script>
 					var index = 0;
 					showSlide(index);
 					setInterval (nextSlide, 2000);
@@ -192,27 +173,23 @@ html, body {
 						TweenLite.to($(".bici").eq(index);, 1, {alpha: 1});
 					}
 
-				</script>
+				</script> -->
 	</div>
-	<div id="text1">
-		<h1>Choose a site...</h1>
+	<div id="cuadro">
+			<h1 id="text1">Choose a site...</h1>
+		<div id="cont1">
+			<h3 id="inter">International site</h3>
+			<a href="http://bamboocycles.com/es"><img id="map" src="img/mapa.png"></a>
+		</div>
+		<div id="cont2">
+			<div id="ico1">	
+				<h3>Local sites</h3>
+				<a href="http://bamboocycles.com.mx"><img id="mex" src="img/mexico.png"></a>
+				<a href="htto://bamboocycles.com/de"><img id="alem" src="img/alemania.png"></a>
+				<a href="http://bamboocycles.com/es"><img id="esp" src="img/esp.png"></a>
+				<a href="http://bamboocycles.com/en"><img id="eua" src="img/eua.png"></a>
+			</div>
+		</div>
 	</div>	
-	<div id="cont1">
-		<h3>International site</h3>
-		<div id="map">
-			<a href="http://bamboocycles.com/es"><img src="img/mapa.png"></a>
-		</div>
-	</div>
-	<div id="cont2">
-		<h3>Local sites</h3>
-		<div id="ico1">
-			<a href="http://bamboocycles.com.mx"><img id="mex" src="img/mexico.png"></a>
-			<a href="htto://bamboocycles.com/de"><img id="alem" src="img/alemania.png"></a>
-		</div>
-		<div div="ico2">
-			<a href="http://bamboocycles.com/es"><img id="esp" src="img/esp.png"></a>
-			 <a href="http://bamboocycles.com/en"><img id="eua" src="img/eua.png"></a>
-		</div>
-	</div>
 </body>
 </html>
