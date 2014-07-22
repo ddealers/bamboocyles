@@ -3443,7 +3443,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   cursor: default;
 }
 .nav-tabs.nav-justified {
-  width: 100%;
+  width: 10 0%;
   border-bottom: 0;
 }
 .nav-tabs.nav-justified > li {
@@ -6598,8 +6598,8 @@ body,
   }
   .navbar-default .navbar-nav > li > a {
     background-color: #DBDBDB;
-    padding: 10px 10px 5px 10px;
-    margin: 5px 1px 0px 1px;
+    padding: 6px 3px 0px 1px;
+  margin: 3px 1px 3px 1px;
     font-size: 10px;
   }
   .navbar-default .nav-tabs {
@@ -6735,7 +6735,7 @@ body,
     right: 0;
     opacity: 1;
     transition: 0.5s;
-    background-color: #7BBD03;
+    background-color: #B4B2AE;
     color: white;
     padding: 0;
     margin: 0;
@@ -6912,6 +6912,14 @@ body,
     font-size: 14px;
   }
 }
+
+@media (min-width: 1900px){
+  .container {
+    min-width: 1850px;  
+  }
+}
+
+
 /* or @screen-lg */
 .vista.ng-enter {
   -webkit-animation: fadeInLeft 1s;
@@ -7116,33 +7124,33 @@ body,
   display: block;
 }
 .slider-control-nav-list{
-  list-style:none;
-  display: inline-flex;
-  width: 390px;
+  list-style: none;
+  display: block;
+  width: 100%;
   margin: 0px;
   padding: 0;
-  margin-bottom: 18px;
-	
+  margin-bottom: 0px;
+  overflow: hidden
 }
 .slider-control-nav-thumb{
 	padding: 1px;
+  float: left;
 }
 .slider-control-nav-thumb a{
+  display: block;
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
 
-	
-}
-.slider-control-nav-thumb a img{
 }
 
-.slider-control-nav-thumb a img{
+.slider-control-nav-thumb img{
   display: block;
   width: 100%;
-  height: 100%;
   margin: 0px;
   padding: 1px;
   top: 0px; 
 }
-
 
 .ng-modal-overlay {
   /* A dark translucent div that covers the whole screen */
