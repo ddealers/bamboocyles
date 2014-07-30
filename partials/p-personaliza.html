@@ -7,7 +7,7 @@
 						<div class="customize-container-text">Personaliza tu bici eligiendo entre los colores disponibles</div>
 						<div ng-repeat="data in customize_data" class="customize-color-container">
 							<!-- <div class="customize-color-text">Personaliza tu bici eligiendo entre los colores disponibles</div> -->
-							<img class="customize-color-img" src="images/Customize/puños.png" height="39" width="39">
+							<img class="customize-color-img" src="images/Customize/punos.png" height="39" width="39">
 							<div class="customize-color-title">{{data.name}}</div>
 							<div class="customize-color-color-container">
 								<div ng-click="customize(data.slug, $index)" ng-repeat="color in data.colors" class="customize-color-color-container-color" style="background-color: {{color.color}}"></div>
