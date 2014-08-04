@@ -79,7 +79,19 @@ demoApp.controller('BicicletasController', function ($scope) {
 	$scope.selected_index = 0;
 	$scope.personaliza = false;
 	
+	$scope.geom = false;
+	$scope.specs = false;
+	$scope.dealers = false;
 
+	$scope.show = function(section){
+		$scope.hide();
+		$scope[section] = true;
+	}
+	$scope.hide = function(section){
+		$scope.geom = false;
+		$scope.specs = false;
+		$scope.dealers = false;
+	}
 	$scope.select = function (selection) {
 
 		if($scope.selected_index==0){
@@ -551,6 +563,9 @@ demoApp.controller('PersonalizaCtrl', function($scope){
 			case "ltra":
 			child = 2;
 			break;
+			case "cadena":
+			child = 3;
+			break;
 		}
 		for (var i = $scope.customize_data[child].colors.length - 1; i >= 0; i--) {
 			$scope.customize_data[child].colors[i].visible = false;
@@ -586,12 +601,21 @@ demoApp.controller('PersonalizaCtrl', function($scope){
             	{color: "orange", name:"LT2", visible: false},
             	{color: "green", name:"LT3", visible: false}
             ]
-        }
-        // {
-        //     name: "Cadena",
-        //     image: "puños.png",
-        //     colors: ["blue","purple","#55443A"]
-        // },
+        },
+        {
+        	name: "Cadena",
+        	slug: "cadena",
+        	image: "punos.png",
+        	colors: [
+        		{color: "blue",name: "cadena/cadena-azul", visible: false},
+        		{color: "white", name: "cadena/cadena-blanca", visible: false},
+        		{color: "purple", name: "cadena/cadena-morada", visible: false},
+        		{color: "black", name: "cadena/cadena-negra", visible: false},
+        		{color: "grey", name: "cadena/cadena-plata", visible: false},
+        		{color: "red", name: "cadena/cadena-roja", visible: false},
+        		{color: "green", name: "cadena/cadena-verde", visible: false},
+        	]
+        },
         // {
         //     name: "Puños",
         //     image: "puños.png",
@@ -688,23 +712,22 @@ demoApp.controller('TwitterController', function ($scope) {
 demoApp.controller('ContactoController', function ($scope) {
 	var map;
 	$scope.modalShown = false;
+	/*
 	function initialize() {
 	  var mapOptions = {
 	    zoom: 8,
-	    center: new google.maps.LatLng(-34.397, 150.644)
+	    center: new google.maps.LatLng(39.283674, -37.19545)
 	  };
 	  var map_tmp = document.getElementById('map-canvas');
 	  map = new google.maps.Map(map_tmp,
 	      mapOptions);
-	  console.log("Entrón aca");
-	  console.log(map_tmp);
-	}
-	
-	$scope.showForm = function(){
-		$scope.modalShown = true;
 	}
 	// google.maps.event.addDomListener(window, 'load', initialize);
 	initialize();
+	*/
+	$scope.showForm = function(){
+		$scope.modalShown = true;
+	}
 });
 
 demoApp.controller('TalleresCtrl', function ($scope) {

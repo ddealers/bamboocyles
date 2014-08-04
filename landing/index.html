@@ -164,16 +164,15 @@ html, body {
 					setInterval (nextSlide, 2000);
 
 					function nextSlide () {
-						var total = $ (".bici").length;
+						var total = $(".bici").length;
 						index++;
 						if (index>=total){index=0} 
 						showSlide (index);		
 					}
 
 					function showSlide (index) {
-						console.log(index);
 						TweenLite.to($(".bici"), 1, {alpha: 0});
-						TweenLite.to($(".bici").eq(index);, 1, {alpha: 1});
+						TweenLite.to($(".bici").eq(index), 1, {alpha: 1});
 					}
 				</script>
 	</div>

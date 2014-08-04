@@ -16,16 +16,18 @@
 					<div ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}' ng-switch on="selected_index==3">
 						<slider-control ng-switch-when="true" images="street_thumbs" />
 					</div>
+					<!--
 					<div class="section-menu">
-						<h5 class="b-bici" ng-click="showForm()">Geometry</h5>
-						<h5 class="b-bici" ng-click="showForm()">Specifications</h5>
-						<h5 id="b-find" ng-click="showForm()">Fin a dealer</h5>
+						<a class="b-bici" ng-click="show('geom')">Geometry</a>
+						<a class="b-bici" ng-click="show('specs')">Specifications</a>
+						<a id="b-find" ng-click="show('dealers')">Find a dealer</a>
 					</div>
+					-->
 				</div>
 				<!-- <div class="customize-button" ng-click="changePersonaliza()"><div class="text">Personaliza</div></div> -->
 			</div>
 			<div class="margenes section-one flex-container-center" ng-class='{"first-selected": selected_index==1, "second-selected": selected_index == 2, "third-selected": selected_index == 3}' ng-switch on="selected_index==1">
-				 <slider ng-switch-when="true" images="cruise_images" />
+				<slider ng-switch-when="true" images="cruise_images" />
 				<div ng-switch-when="false" class="img-container" ng-click="select(1)">
 					<img class="img-responsive" src="./images/Cuadros/cruise.jpg"  alt="">
 				</div>
