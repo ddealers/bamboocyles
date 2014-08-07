@@ -522,9 +522,9 @@ demoApp.controller('PersonalizaCtrl', function($scope){
 	$scope.personaliza = true;
 
 	$scope.select = function (selection) {
-		for (var i = $scope.customize_data.length - 1; i >= 0; i--) {
-			for (var j = $scope.customize_data[i].colors.length - 1; j >= 0; j--) {
-				$scope.customize_data[i].colors[j].visible = false;
+		for (var i = $scope.customize_data[selection-1].length - 1; i >= 0; i--) {
+			for (var j = $scope.customize_data[selection-1][i].colors.length - 1; j >= 0; j--) {
+				$scope.customize_data[selection-1][i].colors[j].visible = false;
 			}
 		};
 		if($scope.selected_index==0){
@@ -551,7 +551,12 @@ demoApp.controller('PersonalizaCtrl', function($scope){
 	$scope.isPersonaliza = function () {
 		return $scope.personaliza;
 	}
-	$scope.customize = function(group, index){
+	$scope.customize = function(data, index){
+		for (var i = data.colors.length - 1; i >= 0; i--) {
+			data.colors[i].visible = false;
+		};
+		data.colors[index].visible = true;
+		/*
 		child = -1;
 		switch(group){
 			case "punos":
@@ -571,8 +576,165 @@ demoApp.controller('PersonalizaCtrl', function($scope){
 			$scope.customize_data[child].colors[i].visible = false;
 		};
 		$scope.customize_data[child].colors[index].visible = true;
+		*/
 	}
 	$scope.customize_data = [
+		[],
+		[
+	        {
+	        	name: "Cadena",
+	        	slug: "cadena",
+	        	image: "punos.png",
+	        	colors: [
+	        		{color: "blue",name: "cadena-azul", visible: false},
+	        		{color: "white", name: "cadena-blanca", visible: false},
+	        		{color: "purple", name: "cadena-morada", visible: false},
+	        		{color: "black", name: "cadena-negra", visible: false},
+	        		{color: "grey", name: "cadena-plata", visible: false},
+	        		{color: "red", name: "cadena-roja", visible: false},
+	        		{color: "green", name: "cadena-verde", visible: false},
+	        	]
+	        }
+    	],
+    	[
+    		{
+    			name: "Aro Delantero",
+    			slug: "arod",
+    			image: "punos.png",
+    			colors: [
+    				{color: "white", name: "arod-blanco", visible: false},
+	        		{color: "black", name: "arod-negro", visible: false},
+	        		{color: "grey", name: "arod-plata", visible: false}
+    			]
+    		},
+    		{
+    			name: "Aro Trasero",
+    			slug: "arot",
+    			image: "punos.png",
+    			colors: [
+    				{color: "white", name: "arot-blanco", visible: false},
+	        		{color: "black", name: "arot-negro", visible: false},
+	        		{color: "grey", name: "arot-plata", visible: false}
+    			]
+    		},
+    		{
+    			name: "Asiento",
+    			slug: "asiento",
+    			image: "punos.png",
+    			colors: [
+    				{color: "yellow", name: "asiento-amarillo", visible: false},
+	        		{color: "blue", name: "asiento-azul", visible: false},
+	        		{color: "white", name: "asiento-blanco", visible: false},
+	        		{color: "brown", name: "asiento-cafe", visible: false},
+	        		{color: "black", name: "asiento-negro", visible: false},
+	        		{color: "red", name: "asiento-rojo", visible: false},
+	        		{color: "pink", name: "asiento-rosa", visible: false},
+	        		{color: "green", name: "asiento-verde", visible: false},
+    			]
+    		},
+    		{
+    			name: "Cadena",
+    			slug: "cadena",
+    			image: "punos.png",
+    			colors: [
+    				{color: "blue",name: "cadena-azul", visible: false},
+	        		{color: "white", name: "cadena-blanca", visible: false},
+	        		{color: "purple", name: "cadena-morada", visible: false},
+	        		{color: "black", name: "cadena-negra", visible: false},
+	        		{color: "grey", name: "cadena-plata", visible: false},
+	        		{color: "red", name: "cadena-roja", visible: false},
+	        		{color: "green", name: "cadena-verde", visible: false}
+    			]
+    		},
+    		{
+    			name: "Llanta delantera",
+    			slug: "llantad",
+    			image: "punos.png",
+    			colors: [
+    				{color: "blue",name: "llantad-azul", visible: false},
+	        		{color: "white", name: "llantad-blanca", visible: false},
+	        		{color: "purple", name: "llantad-morada", visible: false},
+	        		{color: "orange", name: "llantad-naranja", visible: false},
+	        		{color: "black", name: "llantad-negra", visible: false},
+	        		{color: "red", name: "llantad-roja", visible: false},
+	        		{color: "pink", name: "llantad-rosa", visible: false},
+	        		{color: "green", name: "llantad-verde", visible: false},
+    			]
+    		},
+    		{
+    			name: "Llanta trasera",
+    			slug: "llantat",
+    			image: "punos.png",
+    			colors: [
+    				{color: "blue",name: "llantat-azul", visible: false},
+	        		{color: "white", name: "llantat-blanca", visible: false},
+	        		{color: "purple", name: "llantat-morada", visible: false},
+	        		{color: "orange", name: "llantat-naranja", visible: false},
+	        		{color: "black", name: "llantat-negra", visible: false},
+	        		{color: "red", name: "llantat-roja", visible: false},
+	        		{color: "pink", name: "llantat-rosa", visible: false},
+	        		{color: "green", name: "llantat-verde", visible: false},
+    			]
+    		},
+    		{
+    			name: "Multi",
+    			slug: "multi",
+    			image: "punos.png",
+    			colors: [
+    				{color: "blue",name: "multi-azul", visible: false},
+	        		{color: "white", name: "multi-blanca", visible: false},
+	        		{color: "purple", name: "multi-morada", visible: false},
+	        		{color: "black", name: "multi-negra", visible: false},
+	        		{color: "grey", name: "multi-plata", visible: false},
+	        		{color: "red", name: "multi-roja", visible: false},
+	        		{color: "green", name: "multi-verde", visible: false},
+    			]
+    		},
+    		{
+    			name: "Pedales",
+    			slug: "pedal",
+    			image: "punos.png",
+    			colors: [
+    				{color: "blue",name: "pedal-azul", visible: false},
+	        		{color: "white", name: "pedal-blanco", visible: false},
+	        		{color: "purple", name: "pedal-morado", visible: false},
+	        		{color: "black", name: "pedal-negro", visible: false},
+	        		{color: "red", name: "pedal-rojo", visible: false},
+	        		{color: "green", name: "pedal-verde", visible: false},
+    			]
+    		},
+    		{
+    			name: "Potenciad",
+    			slug: "potenciad",
+    			image: "punos.png",
+    			colors: [
+    				{color: "white", name: "potenciad-blanca", visible: false},
+	        		{color: "black", name: "potenciad-negra", visible: false},
+	        		{color: "grey", name: "potenciad-plata", visible: false},
+    			]
+    		},
+    		{
+    			name: "T. Asiento",
+    			slug: "tasiento",
+    			image: "punos.png",
+    			colors: [
+    				{color: "black", name: "tasiento-negro", visible: false},
+	        		{color: "grey", name: "tasiento-plata", visible: false},
+    			]
+    		},
+    		{
+    			name: "Tijera",
+    			slug: "tijera",
+    			image: "punos.png",
+    			colors: [
+    				{color: "black", name: "tijera-carbono", visible: false},
+	        		{color: "grey", name: "tijera-plata", visible: false},
+    			]
+    		}
+    	]
+	]
+	/*
+	[
         {
             name: "Puños",
             slug: "punos",
@@ -637,6 +799,7 @@ demoApp.controller('PersonalizaCtrl', function($scope){
         //     colors: ["blue","purple","#55443A"]
         // }
     ];
+    */
 });
 
 demoApp.controller('MerchandiseController', function ($scope) {
