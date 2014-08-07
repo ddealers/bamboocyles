@@ -6086,8 +6086,8 @@ body,
   align-content: flex-start;
   align-items: flex-start;
   margin: 0px auto;
-  overflow: hidden;
-  height: 90%;
+  overflow: scroll;
+  height: 100%;
   width: 100%;
 }
 .b-instagram #instafeed a {
@@ -6438,8 +6438,9 @@ body,
   text-align: center;
   color: white;
   border-radius: 10px;
-  padding-top: 4px;
+  padding-top: 2px;
   margin: 3% 1%;
+  cursor: pointer;
 }
 
 #b-find {
@@ -6451,7 +6452,8 @@ body,
   text-align: center;
   color: white;
   border-radius: 10px;
-  padding-top: 4px;
+  padding-top: 2px;
+  cursor: pointer;
 }
 
 
@@ -7235,7 +7237,7 @@ body,
 .ng-modal-close {
   position: absolute;
   top: 3px;
-  right: 5px;
+  right: 20px;
   padding: 5px;
   cursor: pointer;
   font-size: 120%;
@@ -7290,6 +7292,36 @@ body,
     text-shadow: 1px 1px 0px white;
     background: none;
 }
+
+@media (max-width: 768px){
+  .contacto{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .contacto div.float-left{
+    float: none;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px){
+  .contacto{
+    width: 750px;
+    margin: 0 auto; 
+  }
+  .ng-modal-close {
+  position: absolute;
+  top: 3px;
+  left: 50%;  
+  margin-left: 420px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+  }
+} 
+
 .img-custom{
   z-index: 1;
 }
