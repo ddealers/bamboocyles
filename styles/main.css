@@ -6311,6 +6311,9 @@ body,
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 10px 0px black;
 }
+.b-products .menu h1 img{
+  width: 100%;
+}
 .b-products .menu .menu-bicicles {
   position: absolute;
   top: -50px;
@@ -6738,7 +6741,7 @@ body,
     right: 0;
     opacity: 1;
     transition: 0.5s;
-    background-color: #B4B2AE;
+    /*background-color: #B4B2AE;*/
     color: white;
     padding: 0;
     margin: 0;
