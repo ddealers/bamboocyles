@@ -594,7 +594,12 @@ demoApp.controller('PersonalizaCtrl', function($scope){
 	        		{color: "red", name: "cadena-roja", visible: false},
 	        		{color: "green", name: "cadena-verde", visible: false},
 	        	]
+	        },
+	        {
+
+					        	
 	        }
+
     	],
     	[
     		{
