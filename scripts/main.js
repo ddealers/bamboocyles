@@ -1,4 +1,4 @@
-
+//button Check answers
 var demoApp = angular.module('demoApp', ['ngRoute','ngAnimate']);
 
 demoApp.config(function ($routeProvider) {
@@ -207,6 +207,12 @@ demoApp.controller('BicicletasController', function ($scope) {
 	  }, {
 	    src: './images/Bicicletas/cruise/img6.jpg',
 	    title: 'Pic 6'
+	  }, {
+	    src: './images/Bicicletas/cruise/img7.jpg',
+	    title: 'Pic 7'
+	  }, {
+	    src: './images/Bicicletas/cruise/img8.jpg',
+	    title: 'Pic 8'
 	  }];
 
 	$scope.street_images = [{
@@ -273,6 +279,12 @@ demoApp.controller('BicicletasController', function ($scope) {
 	  }, {
 	    src: './images/Bicicletas/cruise/thumbs/img6.jpg',
 	    title: 'Pic 6'
+	  }, {
+	    src: './images/Bicicletas/cruise/thumbs/img7.jpg',
+	    title: 'Pic 7'
+	  }, {
+	    src: './images/Bicicletas/cruise/thumbs/img8.jpg',
+	    title: 'Pic 8'
 	  }];
 
 	$scope.street_thumbs = [{
@@ -1063,9 +1075,9 @@ demoApp.animation('.menu-animation', function () {
 				// TweenMax.to(menu_two, 1, {left: '100%', onComplete: done });
 				// TweenMax.to(menu_three, 1, {left: '133.3333%', onComplete: done });
 
-				TweenMax.to(menu_one, 0.5, {top: '-40px', onComplete: done });
-				TweenMax.to(menu_two, 0.5, {top: '-40px', onComplete: done });
-				TweenMax.to(menu_three, 0.5, {top: '-40px', onComplete: function () {
+				TweenMax.to(menu_one, 0.5, {top: '-60px', onComplete: done });
+				TweenMax.to(menu_two, 0.5, {top: '-60px', onComplete: done });
+				TweenMax.to(menu_three, 0.5, {top: '-60px', onComplete: function () {
 					TweenMax.fromTo(menu_one, 0.5, {left: '0px'}, {top: '0px', onComplete: done });	
 					TweenMax.to(menu_bicicles, 0.5, {top: '38px', onComplete: done });
 				} });
@@ -1074,9 +1086,9 @@ demoApp.animation('.menu-animation', function () {
         	else if (className == 'second-selected')
         	{
         		console.log(className);
-				TweenMax.to(menu_one, 0.5, {top: '-40px', onComplete: done });
-				TweenMax.to(menu_two, 0.5, {top: '-40px', onComplete: done });
-				TweenMax.to(menu_three, 0.5, {top: '-40px', onComplete: function () {
+				TweenMax.to(menu_one, 0.5, {top: '-60px', onComplete: done });
+				TweenMax.to(menu_two, 0.5, {top: '-60px', onComplete: done });
+				TweenMax.to(menu_three, 0.5, {top: '-60px', onComplete: function () {
 					TweenMax.fromTo(menu_two, 0.5, {left: '0px'}, {top: '0px', onComplete: done });	
 					TweenMax.to(menu_bicicles, 0.5, {top: '38px', onComplete: done });
 				} });
@@ -1089,9 +1101,9 @@ demoApp.animation('.menu-animation', function () {
 				// TweenMax.to(menu_two, 0.5, {left: '-33.3333%', onComplete: done });
 				// TweenMax.to(menu_three, 0.5, {left: '0%', onComplete: done });
 
-				TweenMax.to(menu_one, 0.5, {top: '-40px', onComplete: done });
-				TweenMax.to(menu_two, 0.5, {top: '-40px', onComplete: done });
-				TweenMax.to(menu_three, 0.5, {top: '-40px', onComplete: function () {
+				TweenMax.to(menu_one, 0.5, {top: '-60px', onComplete: done });
+				TweenMax.to(menu_two, 0.5, {top: '-60px', onComplete: done });
+				TweenMax.to(menu_three, 0.5, {top: '-60px', onComplete: function () {
 					TweenMax.fromTo(menu_three, 0.5, {left: '0px'}, {top: '0px', onComplete: done });	
 					TweenMax.to(menu_bicicles, 0.5, {top: '38px', onComplete: done });
 				} });
@@ -1127,10 +1139,10 @@ demoApp.animation('.menu-animation', function () {
 				// TweenMax.to(menu_three, 1, {left: '66.6666%', top: '0px', onComplete: done });
 
 				if ($(window).width() >= 768) {
-					TweenMax.to(menu_one, 0.5, {top: '-40px', onComplete: done });
-					TweenMax.to(menu_two, 0.5, {top: '-40px', onComplete: done });
-					TweenMax.to(menu_three, 0.5, {top: '-40px', onComplete: done });
-					TweenMax.to(menu_bicicles, 0.5, {top: '-40px', onComplete: function () {
+					TweenMax.to(menu_one, 0.5, {top: '-60px', onComplete: done });
+					TweenMax.to(menu_two, 0.5, {top: '-60px', onComplete: done });
+					TweenMax.to(menu_three, 0.5, {top: '-60px', onComplete: done });
+					TweenMax.to(menu_bicicles, 0.5, {top: '-60px', onComplete: function () {
 							TweenMax.fromTo(menu_one, 0.5, {left: '0%'}, {top: '0px', onComplete: done });
 							TweenMax.fromTo(menu_two, 0.5, {left: '33.3333%'}, {top: '0px', onComplete: done });
 							TweenMax.fromTo(menu_three, 0.5, {left: '66.6666%'}, {top: '0px', onComplete: done });
@@ -1139,10 +1151,10 @@ demoApp.animation('.menu-animation', function () {
 					});
 				}
 				else {
-					TweenMax.to(menu_one, 0.5, {top: '-40px', onComplete: done });
-					TweenMax.to(menu_two, 0.5, {top: '-40px', onComplete: done });
-					TweenMax.to(menu_three, 0.5, {top: '-40px', onComplete: done });
-					TweenMax.to(menu_bicicles, 0.5, {top: '-40px', onComplete: function () {
+					TweenMax.to(menu_one, 0.5, {top: '-60px', onComplete: done });
+					TweenMax.to(menu_two, 0.5, {top: '-60px', onComplete: done });
+					TweenMax.to(menu_three, 0.5, {top: '-60px', onComplete: done });
+					TweenMax.to(menu_bicicles, 0.5, {top: '-60px', onComplete: function () {
 							TweenMax.fromTo(menu_one, 0.5, {left: '0%'}, {top: '0px', onComplete: done });
 							TweenMax.fromTo(menu_two, 0.5, {left: '0%'}, {top: '300px', onComplete: done });
 							TweenMax.fromTo(menu_three, 0.5, {left: '0%'}, {top: '600px', onComplete: done });	

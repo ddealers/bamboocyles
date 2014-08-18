@@ -7036,6 +7036,13 @@ body,
   /* vertical alignment of the inline element */
   font: 16px/1 Arial sans-serif;
 }
+.slider .slider-slide .slider-slide-bg{
+  background: no-repeat center center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
 .slider .slider-arrows {
   position: absolute;
   z-index: 1002;

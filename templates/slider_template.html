@@ -1,6 +1,7 @@
 <div class="slider">
   <div class="slider-slide slide-animation" ng-repeat="image in images" ng-show="image.visible">
-    <img class="slider-slide-img" ng-src="{{image.src}}" />
+    <!--img class="slider-slide-img" ng-src="{{image.src}}" /-->
+    <div class="slider-slide-bg" style="background-image:url({{image.src}})"></div>
   </div>
   
   <a href="" class="slider-arrows slider-arrows-left" ng-click="prev()">
